@@ -12,11 +12,12 @@ package cn.andios.kotlin.objectOriented
 // primary构造方法不能包含任何代码，它对变量赋初值的功能由init代码块来完成
 class MyClass constructor(username: String){
 
-    private val username: String = username.toUpperCase();
+    private var user: String = username.toUpperCase();
 
     // init初始化代码块给类的成员变量赋初值，可直接访问构造方法的参数
     init {
         println(username)
+        println(user)
     }
 }
 
