@@ -1,4 +1,4 @@
-package cn.andios.kotlin.demo
+package cn.andios.kotlin.base
 
 // 导包
 // import cn.andios.kotlin.demo2.mul
