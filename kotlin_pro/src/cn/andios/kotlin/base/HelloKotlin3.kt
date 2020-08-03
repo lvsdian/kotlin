@@ -46,5 +46,4 @@ fun main(args: Array<String>){
     }
 
     println("kotlin方式2：max3 = $max3, min3 = $min3")
-
 }

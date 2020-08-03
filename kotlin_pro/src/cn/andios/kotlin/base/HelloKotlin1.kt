@@ -29,5 +29,4 @@ fun myPrint2(a: Int, b: Int) {
     println(a + b)
     // java：println(a + "+" + b + "=" + (a + b))
     println("$a + $b = ${a + b}")
-
 }
