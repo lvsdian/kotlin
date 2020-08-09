@@ -28,13 +28,14 @@ fun test4(vararg strs: String) {
     strs.forEach { println(it) }
 }
 
+// kotlin中调用java方法时不能使用具名参数语法，因为java字节码并不总是会保留方法参数名信息
 fun main(args: Array<String>) {
     test1()  // 不传参数，都取默认值
     test1(2) // 只传一个，默认就是第一个参数
     test1(b = 2) // 显示指定参数名
     test1(2, 3)
 
-    println("--------------------")
+    println("-------------------")
 
     test2(b = 3) // 具名参数(named argument)
 
@@ -65,6 +66,8 @@ fun main(args: Array<String>) {
     test4("a", "b" ,"c")
     // *表示分散运算符，spread operator
     test4(strs = *arrayOf("a", "b", "c"))
+    val arrays = arrayOf("1", "2", "3", "4")
+    test4(*arrays)
 }
 
 
