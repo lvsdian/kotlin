@@ -6,13 +6,13 @@ package cn.andios.kotlin.kotlin2java
  */
 
 fun main(args: Array<String>) {
-    val list = ArrayList<String>()
+    val list1 = ArrayList<String>()
 
-    list.add("hello")
-    list.add("world")
+    list1.add("hello")
+    list1.add("world")
 
-    for (i in 0 until list.size) {
-        println(list[i])
+    for (i in 0 until list1.size) {
+        println(list1[i])
     }
 
     println("----------------------------")
@@ -20,5 +20,26 @@ fun main(args: Array<String>) {
     var person = Person()
     person.age = 20
     person.isMarried = false
-    person.name =
+    person.name = "张三"
+
+    println(person.age)
+    println(person.isMarried)
+    println(person.name)
+
+    println("-----------------------------")
+
+    // 在java中，所有引用都可能为null，而在kotlin中，对null是有着严格的检查与限制的，这就使得某个来自于java的引用在kotlin中
+    // 变得不再合适，基于这个原因，在kotlin中，将来自于java的声明类型称为平台类型(platform types)
+    // 对于这种类型（平台类型）来说，kotlin的null检查就会得到一定的缓和，变得不再那么严格了，这样就使得空安全的语义要求变得与java一致
+    // 当我们调用平台类型引用的方法时，kotlin就不会在编译期间施加空安全检查，使得编译可以安全通过，但在运行期间有可能抛出异常，因为平台类型引用值
+    // 可能为null
+
+    val list2 = ArrayList<String>()
+    //list2.add("hello")
+    val size = list2.size
+    val item = list2[0] // java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+
+    val s1: String? = item // 允许，总是可以的
+    val s2: String = item // 允许，不过在运行期可能失败
+
 }
