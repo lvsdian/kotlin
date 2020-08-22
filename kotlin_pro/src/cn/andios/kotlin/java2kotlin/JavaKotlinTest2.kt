@@ -6,11 +6,11 @@ package cn.andios.kotlin.java2kotlin
 // 反编译：public final class cn.andios.kotlin.java2kotlin.MyClass
 class MyClass
 
-// 反编译：public static final void test();
+// 反编译：public startic final void test();
 fun test() {
     println("hello")
 }
 
 // 反编译：private static final java.lang.String str;
-val str: String = "world"
+var str: String = "world"
 

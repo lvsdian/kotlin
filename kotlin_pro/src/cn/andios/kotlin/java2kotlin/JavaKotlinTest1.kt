@@ -11,6 +11,6 @@ package cn.andios.kotlin.java2kotlin
 // 3.这种规则适用于任何类型，而不单单是boolean类型
 
 
-class Test{
+class MyTest{
     val name: String = "loser"
 }
