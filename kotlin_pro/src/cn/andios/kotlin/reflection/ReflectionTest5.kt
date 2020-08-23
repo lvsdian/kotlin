@@ -20,6 +20,7 @@ fun main(args: Array<String>) {
 
     println("-------------------")
 
+    ::b.set(10)
     println(::b)        // var b: kotlin.Int
     println(::b.get())  // 3
     println(::b.name)   // b
