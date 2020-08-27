@@ -25,7 +25,7 @@ fun main() = runBlocking {
         val result2 = value2.await()
         println("$result1 + $result2 = ${result1 + result2}")
     }
-    // 3000+，因为上述两个方法串行执行
+    // 2000+，因为上述两个方法串行执行
     println("total:$elapsedTime")
 
 }
