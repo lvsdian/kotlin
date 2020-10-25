@@ -12,7 +12,7 @@ import kotlinx.coroutines.runBlocking
 
 // Flow context
 // Flow的收集动作总是发生在调用协程的上下文当中,这个特性叫做Context Preservation(上下文保留)
-
+// 如下，如果myMethod方法阻塞住了，就会影响main线程的执行
 private fun log(msg: String) = println("[${Thread.currentThread().name}], $msg")
 
 private fun myMethod(): Flow<Int> = flow {

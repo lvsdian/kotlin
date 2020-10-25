@@ -18,6 +18,7 @@ private fun myMethod(): Sequence<Int> = sequence {
     }
 }
 
+// 阻塞主线程，结果计算完一个就返回一个
 fun main() {
     myMethod().forEach { println(it) }
 }

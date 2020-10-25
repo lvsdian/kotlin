@@ -17,6 +17,7 @@ private suspend fun myMethod(): List<String> {
     return listOf("111", "222", "333")
 }
 
+// 不会阻塞主线程，一次性返回结果
 fun main() = runBlocking<Unit> {
     myMethod().forEach {
         println(it)

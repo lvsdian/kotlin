@@ -31,6 +31,7 @@ private fun myMethod(): Flow<Int> = flow {
 // 2
 // finished
 fun main() = runBlocking {
+    // 总时间是250ms，myMethod执行两次是200ms，执行3次超过了250ms，就会被取消
     withTimeoutOrNull(250) {
         myMethod().collect { println(it) }
     }
